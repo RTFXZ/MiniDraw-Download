@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MiniDraw</title>
+  <meta name="description" content="MiniDraw — lightweight drawing app. Try it online or download for offline use." />
+  <style>
+    :root{
+      --bg:#020617;--panel:#0b1220;--accent:#06b6d4;--accent2:#22c55e;--text:#e5e7eb;--muted:#94a3b8
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;min-height:100vh;
+      background:radial-gradient(1200px 600px at 10% -10%, #081027 0%, transparent 50%),
+                 radial-gradient(1000px 600px at 110% 10%, #001c2b 0%, transparent 55%),
+                 linear-gradient(180deg,#020617,#030924);
+      color:var(--text);
+      font-family: Inter, system-ui, Segoe UI, Roboto, monospace;
+    }
+
+    header{
+      padding:22px 26px;
+      display:flex;align-items:center;justify-content:space-between;
+      border-bottom:1px solid rgba(255,255,255,0.05)
+    }
+
+    .logo{font-weight:800;letter-spacing:.5px;font-size:20px}
+    .logo span{color:var(--accent)}
+
+    main{max-width:1100px;margin:auto;padding:64px 20px}
+
+    .hero{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center
+    }
+
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:16px;
+      padding:28px;
+      box-shadow:0 10px 35px rgba(0,0,0,.45)
+    }
+
+    h1{font-size:44px;line-height:1.1;margin:0 0 14px}
+    p{color:var(--muted);margin:0 0 24px}
+
+    .btns{display:flex;gap:14px;flex-wrap:wrap}
+
+    .btn{
+      text-decoration:none;
+      padding:14px 22px;border-radius:12px;
+      font-weight:600;letter-spacing:.3px;
+      display:inline-flex;align-items:center;gap:10px
+    }
+
+    .try{background:var(--accent);color:#001014}
+    .download{
+      background:transparent;color:var(--accent2);
+      border:2px solid var(--accent2)
+    }
+
+    .btn:hover{transform:translateY(-2px)}
+
+    .features{margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+
+    .feature{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.05);
+      border-radius:12px;
+      padding:16px
+    }
+
+    .feature h3{margin:0 0 6px;font-size:16px;color:#c7f8ff}
+    .feature p{margin:0;font-size:14px}
+
+    footer{
+      margin-top:80px;
+      padding:22px;color:var(--muted);
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,0.05)
+    }
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      h1{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Mini<span>Draw</span></div>
+  <nav>
+    <a class="btn try" href="https://rtfxz.github.io/MiniDraw/" target="_blank">Try Online</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="card">
+      <h1>Draw online.<br>Download offline.</h1>
+      <p>MiniDraw is a fast, lightweight drawing app that runs 100% client-side. No login, no tracking, runs anywhere a browser exists.</p>
+
+      <div class="btns">
+        <a class="btn try" href="https://rtfxz.github.io/MiniDraw/" target="_blank">Try MiniDraw</a>
+
+        <!-- Replace # with your real file link -->
+        <a class="btn download" href="https://release-assets.githubusercontent.com/github-production-release-asset/1111546027/acc873d9-ba97-42fe-8805-2bc6bc0ffdfe?sp=r&sv=2018-11-09&sr=b&spr=https&se=2025-12-07T09%3A38%3A28Z&rscd=attachment%3B+filename%3DMiniDraw.apk&rsct=application%2Fvnd.android.package-archive&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2025-12-07T08%3A38%3A23Z&ske=2025-12-07T09%3A38%3A28Z&sks=b&skv=2018-11-09&sig=SbcfZIfyzEWdC7iYVYrOI8EVLyOr01LDL4fCLASOK4I%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc2NTA5Nzg1OCwibmJmIjoxNzY1MDk3NTU4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.yKsd840Y9zGq69iq-uAL1RWPRQFLa_xh9HAdpOmEMfw&response-content-disposition=attachment%3B%20filename%3DMiniDraw.apk&response-content-type=application%2Fvnd.android.package-archive">Download MiniDraw</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Features</h2>
+      <ul style="color:var(--muted);line-height:1.7;padding-left:18px">
+        <li>🖊️ Pen & eraser tools</li>
+        <li>🎨 Color picker + opacity</li>
+        <li>📐 Adjustable brush size</li>
+        <li>↩️ Undo / redo stack</li>
+        <li>💾 Export to PNG</li>
+        <li>📱 Touch + mouse support</li>
+        <li>📦 Single-file offline app</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>Zero install</h3>
+      <p>Just open the HTML file and start drawing.</p>
+    </div>
+    <div class="feature">
+      <h3>All offline</h3>
+      <p>No network needed once downloaded.</p>
+    </div>
+    <div class="feature">
+      <h3>Touch friendly</h3>
+      <p>Works on phones, tablets, Chromebooks.</p>
+    </div>
+    <div class="feature">
+      <h3>Lightweight</h3>
+      <p>Loads instantly — under a few hundred KB.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 MiniDraw by RTFXZ • No accounts • No ads • Pure client-side canvas
+</footer>
+
+</body>
+</html>
